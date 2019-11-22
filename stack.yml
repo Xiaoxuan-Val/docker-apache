@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  web:
+    image: testapp    
+    ports:
+      - "80:80"
+    networks:
+       - internal
+       - front-end
+networks:
+  internal:
+  front-end:
+    external: true
